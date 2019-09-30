@@ -1,0 +1,618 @@
+/* --------------- reset.css --------------- */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+img,
+strong,
+sub,
+sup,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    /* обнуляем отступы и убираем бордюры */
+    vertical-align: baseline;
+    /* приводим все к одной базовой линии */
+    background: transparent;
+    /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+
+    color: #000;
+
+}
+
+p {
+    font-size: 0.875em;
+
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+    /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    outline: none;
+}
+
+table {
+    /* устраняем отступы между ячейками таблицы */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+td img {
+    vertical-align: top;
+    /* возвращаем привычное вертикальное выравнивание */
+}
+
+input,
+select,
+button,
+textarea {
+    margin: 0;
+    /* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+    font-size: 100%;
+    /* делаем размер шрифтов везде одинаковым */
+    outline: none;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    padding: 0;
+    /* убираем внутренние отступы для текстовых полей */
+}
+
+input[type="checkbox"] {
+    /* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+    vertical-align: bottom;
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+    min-height: 100%;
+    /* всегда показываем вертикальную полосу прокрутки  */
+}
+
+body {
+    color: #000;
+    text-align: left;
+    font-size: 1em;
+    /* используем безопасные шрифтовые CSS стеки */
+    min-height: 100%;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 1.4375em;
+
+}
+
+h3 {
+    font-size: 1.125em;
+
+}
+
+img {
+
+    max-width: 100%;
+}
+
+.clr {
+    clear: both;
+}
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* --------------- /базовые настройки ---------*/
+
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('font/DroidSans-Bold.eot');
+    src: local('font/Droid Sans Bold'), local('font/DroidSans-Bold'),
+        url('font/DroidSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/DroidSans-Bold.woff') format('woff'),
+        url('font/DroidSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('font/DroidSans.eot');
+    src: local('font/Droid Sans'), local('DroidSans'),
+        url('font/DroidSans.eot?#iefix') format('embedded-opentype'),
+        url('font/DroidSans.woff') format('woff'),
+        url('font/DroidSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.conteiner {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+header {
+    background: rgba(7, 7, 7, 0.3);
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.logo {
+    float: left;
+    padding-top: 10px;
+    padding-left: 7px;
+}
+
+nav .menu {
+    float: right;
+}
+
+ul li {
+    float: left;
+    text-transform: uppercase;
+    padding: 37px 0 44px 30px;
+    font-size: 13px;
+    font-family: 'Droid Sans';
+}
+
+ul li:last-child {
+    padding-right: 0;
+}
+
+ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #4bcaff;
+}
+
+.unslider-nav ol {
+    top: -51px;
+    position: relative;
+}
+
+.unslider-nav ol li.unslider-active {
+    background: #4bcaff;
+}
+
+.banner ul li img {
+    width: 100%;
+}
+
+.text_banner {
+    position: absolute;
+    z-index: 2;
+    top: 330px;
+    left: 639px;
+}
+
+.text_banner h2 {
+    color: #fff;
+    font-weight: bold;
+    font-style: Myriad Pro;
+    font-size: 48px;
+    margin-bottom: 20px;
+    margin-right: 170px;
+}
+
+.text_banner p {
+    margin-right: 70px;
+    color: #fff;
+    font-size: 18px;
+    font-style: Myriad Pro;
+}
+
+.text_banner button {
+    margin-top: 34px;
+    margin-left: 5px;
+    color: #fff;
+    border: 1px solid #fff;
+    width: 194px;
+    border-radius: 10px;
+    height: 63px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0);
+}
+
+.text_banner button:nth-of-type(2) {
+    background: #4bcaff;
+    margin-left: 45px;
+    border: none;
+}
+
+.text_banner button:active {
+    background: #4bcaff;
+}
+
+.text_banner button:nth-of-type(2):active {
+    background: #fff;
+    color: #4bcaff;
+}
+
+section {
+    width: 100%;
+    background: #f9f9f9;
+    margin-top: -24px;
+}
+
+.block_mid {
+    text-align: center;
+}
+
+h2.block_mid {
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 20px;
+    clear: both;
+}
+
+p.block_mid {
+    font-size: 20px;
+    padding-bottom: 70px;
+}
+
+.block2fig {
+    position: relative;
+    left: -38px;
+}
+
+.vnutrimg {
+    position: relative;
+    bottom: 59px;
+    left: 130px;
+}
+
+.container3 {
+    width: 100%;
+}
+
+article.midart {
+    text-align: center;
+    width: 31.8%;
+    float: left;
+    margin-left: 2.3%;
+    margin-bottom: 115px;
+}
+
+article.midart:first-child {
+    margin-left: 0;
+}
+
+section.secu {
+    background: #fff;
+    margin-bottom: 110px;
+}
+
+.container4 {}
+
+.acont4 {
+    float: left;
+    width: 23%;
+    margin-left: 2.66%;
+    text-align: center;
+}
+
+.acont4:first-child {
+    margin-left: 0;
+}
+
+.sect {
+    background-image: url(../images/fon2.jpg);
+    background-size: cover;
+    ;
+    background-color: #4bcaff;
+    width: 100%;
+    height: 100%;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.mid {
+    text-align: center;
+    width: 63%;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.mid p {
+    color: #fff;
+}
+
+.videosmesh h2 {
+    color: #fff;
+}
+
+section.new32 {
+    background: #414042;
+}
+
+.mid2 {
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    padding: 100px;
+}
+
+.mid2 h2 {
+    font-size: 55px;
+    color: #fff;
+}
+
+.mid2 button {
+    background: #4bcaff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-weight: 500;
+    -webkit-box-shadow: 0 3px 2px #277697;
+    box-shadow: 0 3px 2px #277697;
+}
+
+section.formsec {
+    position: relative;
+}
+
+.formcont {
+    text-align: center;
+    background: rgba(107, 207, 248, .8);
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    margin-left: -160px;
+    width: 320px;
+    border-radius: 5px;
+}
+
+.formcont legend {
+    color: #fff;
+    font-size: 36px;
+    padding: 36px;
+}
+
+.formcont input,
+textarea {
+    padding: 10px 40px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: none;
+    width: 270px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.formcont textarea {
+    height: 147px;
+}
+
+.formcont button {
+    background: #414042;
+    color: #72b3cc;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 80px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 4px 3px #313032;
+    box-shadow: 0px 4px 3px #313032;
+    margin-bottom: 15px;
+}
+
+section.last {
+    height: 110px;
+    background: #414042;
+}
+
+
+.contenent {
+    display: none;
+    width: 300px;
+    height: 400px;
+    background: green;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -200px;
+    z-index: 3;
+    -webkit-animation: bounce 1000ms ease-out;
+    animation: bounce 1000ms ease-out;
+}
+
+.contenent_over {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.contenent_up {
+    display: block;
+}
+
+.text_cont {
+    height: 150px;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: translateY(-1000px);
+
+    }
+
+    50% {
+        -webkit-transform: translateY(0px);
+
+    }
+
+    55% {
+        -webkit-transform: translateY(10px);
+
+    }
+
+
+    60% {
+        -webkit-transform: translateY(20px);
+
+    }
+
+    65% {
+        -webkit-transform: translateY(10px);
+
+    }
+
+    70% {
+        -webkit-transform: translateY(0px);
+
+    }
+
+    75% {
+        -webkit-transform: translateY(5px);
+
+    }
+
+    80% {
+        -webkit-transform: translateY(10px);
+
+    }
+
+    85% {
+        -webkit-transform: translateY(5px);
+
+    }
+
+    90% {
+        -webkit-transform: translateY(0px);
+
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+
+    }
+
+
+}
