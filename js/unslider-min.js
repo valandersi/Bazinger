@@ -1,4 +1,3 @@
-console.log(12);
 ! function ($) {
     return $ ? ($.Unslider = function (t, n) {
         var e = this;
